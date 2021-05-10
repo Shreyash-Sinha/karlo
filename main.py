@@ -16,7 +16,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:///karlo.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-app.config['SECRET_KEY'] = 'ChrisGayle'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 login_manager = LoginManager()
 login_manager.init_app(app)
 Bootstrap(app)
