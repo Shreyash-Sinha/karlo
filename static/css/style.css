@@ -1,0 +1,134 @@
+/* Navigation Bar */
+.navbar{
+    background-color: #f8f1f1;
+}
+.nav-item{
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.navbar-brand{
+    font-size: 40px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Header */
+.header{
+    background: #f8f1f1;
+    padding: 5% 7%;
+}
+.slogan{
+    font-size: 45px;
+    margin-bottom: 35px;
+    font-family: 'Quicksand', sans-serif;
+}
+.slogan-text{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}
+.banner{
+    width: 45%;
+    text-align: center;
+    position: relative;
+    top: 35px;
+    left: 200px;
+    opacity: 1.0;
+    margin-bottom: 100px;
+}
+@media (max-width: 992px){
+    .banner{
+        width: 45%;
+        text-align: center;
+        opacity: 1.0;
+        margin-bottom: 100px;
+    }
+}
+
+/* Features */
+.features{
+    padding: 7% 15%;
+    text-align: center;
+}
+.img img{
+    width: 30%;
+    margin-bottom: 20px;
+}
+.features h3{
+    font-family: 'Montserrat', sans-serif;
+}
+.features p{
+    margin-top: 10px;
+    font-family: 'Itim', cursive;
+    font-size: 20px;
+}
+
+/* Testimonials */
+.testimonials{
+    background-color: #fbe6c2;
+    text-align: center;
+}
+.carousel-item{
+    padding: 7% 15%;
+}
+.testimonials h2{
+    margin-bottom: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.testimonials img{
+    border-radius: 50%;
+    width: 10%;
+    margin-right: 10px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+}
+
+/* Contact Us */
+.contact{
+    padding: 7% 15%;
+    text-align: center;
+}
+.contact h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 45px;
+}
+.contact h3{
+    margin: 40px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact button{
+    font-size: 20px;
+}
+
+/* About Us */
+#footer{
+    padding: 7% 15% 5%;
+    text-align: center;
+    background: #f39189;
+    position: relative;
+    bottom: 0;
+}
+
+.media{
+    margin: 20px 10px;
+}
+
+/* Login & Register */
+.masthead{
+    padding: 5% 10%;
+    text-align: center;
+}
+.container{
+    padding: 5% 10% 7%;
+}
+.masthead h1{
+    font-size: 45px;
+    margin-bottom: 35px;
+    font-family: 'Quicksand', sans-serif;
+}
+.masthead p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+}

@@ -1,0 +1,110 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+{% include "header.html" %}
+<style>
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: #f8f1f1;
+}
+.tasks{
+    padding: 3% 10% 12%;
+}
+.task{
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin: 50px 0;
+    padding: 50px;
+    background: #f2dac3;
+}
+.priority img{
+    width: 10%;
+    position: relative;
+    top: 60px;
+}
+.priority{
+    text-align: center;
+}
+.t h2{
+    font-size: 45px;
+    margin: 0 20px 20px;
+}
+.task:hover{
+    background: grey;
+    color: white;
+}
+.t p{
+    margin: 0 20px 20px;
+}
+.b{
+    padding: 50px 15% 0;
+}
+.col-sm-2 a{
+    color: black;
+    text-decoration: none;
+}
+.delete{
+    text-align: center;
+}
+.delete img{
+    width: 20%;
+    position: relative;
+    top: 75px;
+}
+@media (max-width: 775px){
+    .tasks{
+        padding: 3% 10% 55%;
+    }
+    .priority{
+        top: 0;
+    }
+    .delete{
+        text-align: center;
+    }
+    .delete img{
+        width: 20%;
+    }
+}
+</style>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">\
+<div class="container-fluid">
+    <div class="row b">
+        <div class="col-sm-9"></div>
+        <div class="col-sm-2 btn btn-large btn-outline-secondary"><a href="{{ url_for('add_task') }}">Add Task</a></div>
+    </div>
+</div>
+<div class="tasks">
+    {% for i in user.tasks %}
+    <div class="task container-fluid">
+        <div class="tas row">
+            <div class="col-sm-5 t">
+                <h3>Title:</h3>
+                <h2>{{ i.name }}</h2>
+                <h4>Description:</h4>
+                <p>{{ i.body }}</p>
+            </div>
+            <div class="col-sm-5 priority">
+                {% if i.priority == 'High' %}
+                    <img src="/static/images/ribbon.png">
+                    <img src="/static/images/ribbon.png">
+                    <img src="/static/images/ribbon.png">
+                {% elif i.priority == 'Medium' %}
+                    <img src="/static/images/ribbon.png">
+                    <img src="/static/images/ribbon.png">
+                {% else %}
+                    <img src="/static/images/ribbon.png">
+                {% endif %}
+            </div>
+            <div class="col-sm-2 delete">
+                <a href="{{ url_for('delete', index_dash=current_user.id, index_task=i.id) }}"><img src="/static/images/bin-with-lid.png"></a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+{% include "footer.html" %}
+{% endblock %}
